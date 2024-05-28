@@ -1,8 +1,8 @@
 /**
  * @openapi
- * /list-file-by-type:
+ * /list-files-by-type:
  *   get:
- *     operationId: list_file_by_type
+ *     operationId: list_files_by_type
  *     description: List files by type
  *     parameters:
  *       - name: type
@@ -15,7 +15,8 @@
  *       200:
  *         description: A list of files
  */
-function list_file_by_type(env, params) {
+function list_files_by_type(env, params) {
   return env.fs.file_paths.filter(f => f.endsWith(params.type));
 }
-exports.list_file_by_type = list_file_by_type;
+exports.list_files_by_type = list_files_by_type;
+
